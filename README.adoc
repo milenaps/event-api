@@ -1,0 +1,47 @@
+= Sample JAVA REST API for managing events
+
+== Pre-requisites
+* JDK 11+
+* Docker up and running
+
+== Build & Run
+
+First of all, clone or download this repository;
+
+Then from the project root folder in your terminal of choice, start the database navigating to the `src/main/docker` and executing:
+[source, bash]
+--
+docker-compose -f mysql.yml up
+--
+
+Finally, to build and run indeed you can either:
+
+=== From your favorite IDE
+- Open it and wait until the project dependencies finish loading
+- Start the app from the `Application` class
+
+=== Locally from the terminal
+Execute the commands below from the project root folder:
+
+`Unix`
+[source, bash, numbered]
+--
+./mvnw clean package
+./mvnw spring-boot:run
+--
+
+`Windows`
+[source, bash, numbered]
+--
+mvnw.bat clean package
+mvnw.bat spring-boot:run
+--
+
+== Testing the API
+Confirm the application is up by invoking the endpoint: http://localhost:8080/events
+
+Expected result:
+[source, json]
+--
+[]
+--
